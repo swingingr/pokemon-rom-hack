@@ -4015,6 +4015,10 @@ Cry_Overqwil::
 Cry_Enamorus::
 	.incbin "sound/direct_sound_samples/cries/enamorus.bin"
 
+	.align 2
+Cry_RKoffing::
+	.incbin "sound/direct_sound_samples/cries/rkoffing.bin"
+
 .endif
 
 	.align 2

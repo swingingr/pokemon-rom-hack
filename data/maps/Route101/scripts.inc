@@ -48,6 +48,7 @@ Route101_EventScript_PreventExitSouth::
 	lockall
 	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
 	closemessage
+	setvar VAR_MAPLE_LAB, 0
 	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_PreventExitSouth
 	waitmovement 0
 	releaseall

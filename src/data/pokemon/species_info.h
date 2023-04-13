@@ -9783,6 +9783,30 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .flags = SPECIES_FLAG_MYTHICAL,
     },
 
+
+            [SPECIES_RKOFFING] =
+    {
+        .baseHP        = 60,
+        .baseAttack    = 25,
+        .baseDefense   = 95,
+        .baseSpeed     = 35,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 75,
+        .types = { TYPE_ICE, TYPE_POISON },
+        .catchRate = 190,
+        .expYield = 68,
+        .evYield_Defense   = 1,
+        .itemRare = ITEM_NEVER_MELT_ICE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS},
+        .abilities = {ABILITY_LEVITATE, ABILITY_NEUTRALIZING_GAS, ABILITY_STENCH},
+        .bodyColor = BODY_COLOR_BLUE,
+        .noFlip = FALSE,
+    },
+
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_TURTWIG] =
     {
@@ -21045,6 +21069,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
         .flags = SPECIES_FLAG_LEGENDARY,
     },
+
 #endif
 
     [SPECIES_VENUSAUR_MEGA] =

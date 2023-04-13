@@ -252,6 +252,9 @@ LittlerootTown_EventScript_FatMan::
 
 LittlerootTown_EventScript_Boy::
 	msgbox LittlerootTown_Text_BirchSpendsDaysInLab, MSGBOX_NPC
+	givemon SPECIES_RKOFFING, 5, ITEM_DRAGON_FANG
+	msgbox Text_ReceivedDratini, MSGBOX_DEFAULT
+	waitfanfare
 	end
 
 LittlerootTown_EventScript_Twin::
@@ -963,10 +966,10 @@ LittlerootTown_Text_CanUsePCToStoreItems:
 	.string "The power of science is staggering!$"
 
 LittlerootTown_Text_BirchSpendsDaysInLab:
-	.string "PROF. BIRCH spends days in his LAB\n"
-	.string "studying, then he'll suddenly go out in\l"
-	.string "the wild to do more research…\p"
-	.string "When does PROF. BIRCH spend time\n"
+	.string "PROF. BITCH fuckin sucks lol\n"
+	.string "studying, then he'll suddenly fall over\l"
+	.string "lol\p"
+	.string "When does PROF. BITCH spend time\n"
 	.string "at home?$"
 
 LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut:
@@ -1018,4 +1021,7 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
+
+Text_ReceivedDratini:
+	.string "{PLAYER} received a Koffing!$"
 
