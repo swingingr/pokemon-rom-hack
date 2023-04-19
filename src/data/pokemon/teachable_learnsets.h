@@ -16116,6 +16116,12 @@ static const u16 sDeoxysTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sRKoffingTeachableLearnset[] = {
+    MOVE_CUT,
+    MOVE_DIG,
+    MOVE_FACADE,
+};
+
 #if P_GEN_4_POKEMON == TRUE
 static const u16 sTurtwigTeachableLearnset[] = {
     MOVE_ATTRACT,

@@ -18186,6 +18186,19 @@ static const struct LevelUpMove sEnamorusLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SPRINGTIDE_STORM),
     LEVEL_UP_END
 };
+
+static const struct LevelUpMove sRKoffingLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 7, MOVE_FROST_BREATH),
+    LEVEL_UP_MOVE(11, MOVE_TOXIC),
+    LEVEL_UP_MOVE(14, MOVE_DRAINING_KISS),
+    LEVEL_UP_MOVE(22, MOVE_IRON_DEFENSE),
+    LEVEL_UP_MOVE(31, MOVE_EXTRASENSORY),
+    LEVEL_UP_MOVE(41, MOVE_CRUNCH),
+    LEVEL_UP_MOVE(47, MOVE_MOONBLAST),
+    LEVEL_UP_MOVE( 1, MOVE_POISON_GAS),
+    LEVEL_UP_END
+};
 #endif
 
 static const struct LevelUpMove sRattataAlolanLevelUpLearnset[] = {

@@ -413,6 +413,7 @@ const u8 *const gMonIconTable[] =
     [SPECIES_JIRACHI] = gMonIcon_Jirachi,
     [SPECIES_DEOXYS] = gMonIcon_Deoxys,
     [SPECIES_CHIMECHO] = gMonIcon_Chimecho,
+    [SPECIES_RKOFFING] = gMonIcon_RKoffing,
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_TURTWIG] = gMonIcon_Turtwig,
     [SPECIES_GROTLE] = gMonIcon_Grotle,
@@ -1716,6 +1717,7 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_JIRACHI] = 0,
     [SPECIES_DEOXYS] = 0,
     [SPECIES_CHIMECHO] = 0,
+    [SPECIES_RKOFFING] = 4,
     [SPECIES_TURTWIG] = 1,
     [SPECIES_GROTLE] = 1,
     [SPECIES_TORTERRA] = 1,

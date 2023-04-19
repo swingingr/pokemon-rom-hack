@@ -5398,4 +5398,10 @@ const u8 gEnamorusPokedexText[] = _(
     "winter. According to legend, this\n"
     "Pokémon's love gives rise to the\n"
     "budding of fresh life across the land.");
+
+const u8 gRKoffingPokedexText[] = _(
+    "This regional variant of Koffing\n"
+    "seems to have developed a bad cold.\n"
+    "Apparently, the bacteria causing the\n"
+    "illness give this Pokémon its strength.");
 #endif
