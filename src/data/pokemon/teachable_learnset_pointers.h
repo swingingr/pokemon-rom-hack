@@ -387,6 +387,7 @@ const u16 *const gTeachableLearnsets[NUM_SPECIES] =
     [SPECIES_JIRACHI] = sJirachiTeachableLearnset,
     [SPECIES_DEOXYS] = sDeoxysTeachableLearnset,
     [SPECIES_CHIMECHO] = sChimechoTeachableLearnset,
+    [SPECIES_RKOFFING] = sRKoffingTeachableLearnset,
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_TURTWIG] = sTurtwigTeachableLearnset,
     [SPECIES_GROTLE] = sGrotleTeachableLearnset,

@@ -410,6 +410,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_JIRACHI]                      = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  6 },
     [SPECIES_DEOXYS]                       = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  6 },
     [SPECIES_CHIMECHO]                     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  9 },
+    [SPECIES_RKOFFING]                     = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_TURTWIG]                      = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  6 },
     [SPECIES_GROTLE]                       = { .size = MON_COORDS_SIZE(64, 48), .y_offset = 10 },

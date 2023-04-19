@@ -4518,6 +4518,12 @@ static const union AnimCmd sAnim_Chimecho_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_RKoffing_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_Egg_1[] =
 {
     ANIMCMD_FRAME(0, 6),
@@ -11467,6 +11473,7 @@ SINGLE_ANIMATION(Basculegion);
 SINGLE_ANIMATION(Sneasler);
 SINGLE_ANIMATION(Overqwil);
 SINGLE_ANIMATION(Enamorus);
+SINGLE_ANIMATION(RKoffing);
 #endif
 SINGLE_ANIMATION(VenusaurMega);
 SINGLE_ANIMATION(CHARIZARD_MEGA_X);
@@ -12026,6 +12033,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_JIRACHI]     = sAnims_Jirachi,
     [SPECIES_DEOXYS]      = sAnims_Deoxys,
     [SPECIES_CHIMECHO]    = sAnims_Chimecho,
+    [SPECIES_RKOFFING]    = sAnims_RKoffing,
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_TURTWIG] = sAnims_Turtwig,
     [SPECIES_GROTLE] = sAnims_Grotle,

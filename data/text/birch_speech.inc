@@ -1,14 +1,9 @@
 gText_Birch_Welcome::
-	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is BIRCH.\p"
-	.string "But everyone calls me the POKéMON\n"
-	.string "PROFESSOR.\p"
-	.string "$"
+	.string "Oh my goodness! I didn't see you there.\n"
+	.string "This is placeholder text, for now.$"
 
 gText_Birch_Pokemon::
 	.string "This is what we call a “POKéMON.”\p"
-	.string "\n"
 	.string "$"
 
 gText_Birch_MainSpeech::

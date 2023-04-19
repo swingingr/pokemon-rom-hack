@@ -386,6 +386,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_RAYQUAZA] = _("Rayquaza"),
     [SPECIES_JIRACHI] = _("Jirachi"),
     [SPECIES_DEOXYS] = _("Deoxys"),
+    [SPECIES_RKOFFING] = _("RKoffing"),
 #if P_GEN_4_POKEMON == TRUE
     [SPECIES_TURTWIG] = _("Turtwig"),
     [SPECIES_GROTLE] = _("Grotle"),

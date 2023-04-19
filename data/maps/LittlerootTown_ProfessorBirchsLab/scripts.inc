@@ -26,6 +26,283 @@ LittlerootTown_ProfessorBirchsLab_MapScripts::
 	@ 4: Defeated rival on Route 103
 	@ 5: Received pokedex
 
+
+LittlerootTown_MaplesLab_ComeIn::
+	lockall
+	setvar VAR_MAPLE_LAB, 1
+	msgbox LittlerootTown_MaplesLab_ComeIn_Text_0
+	msgbox LittlerootTown_MaplesLab_ComeIn_Text_1
+	msgbox LittlerootTown_MaplesLab_ComeIn_Text_2
+	applymovement OBJ_EVENT_ID_PLAYER, MyMovement
+	releaseall
+	return
+
+
+MyMovement:
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten::
+	lockall
+	showmonpic SPECIES_LITTEN, 10, 3
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_ne LittlerootTown_ProfessorBirchsLab_EventScript_Litten_2
+	hidemonpic
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_9
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_1:
+	releaseall
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_2:
+	hidemonpic
+	removeobject 4
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_1
+	waitmessage
+	waitfanfare
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_2
+	givemon SPECIES_LITTEN, 5
+	setvar VAR_STARTER_CHOICE, 2
+	switch VAR_STARTER_CHOICE
+	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_Litten_6
+	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_Litten_7
+	case 3, LittlerootTown_ProfessorBirchsLab_EventScript_Litten_8
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_Litten_1
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_6:
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_3
+	applymovement 2, Litten_Movement
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_4
+	waitmessage
+	waitfanfare
+	removeobject 4
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_Litten_1
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_7:
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_5
+	applymovement 2, Froakie_Movement
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_6
+	waitmessage
+	waitfanfare
+	removeobject 5
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_Litten_1
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_8:
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_7
+	applymovement 2, Turtwig_Movement
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_8
+	waitmessage
+	waitfanfare
+	removeobject 3
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_Litten_1
+
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Froakie::
+	lockall
+	showmonpic SPECIES_FROAKIE, 10, 3
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_ne LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_2
+	hidemonpic
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_9
+LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_1:
+	releaseall
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_2:
+	hidemonpic
+	removeobject 5
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_Text_1
+	waitmessage
+	waitfanfare
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_2
+	givemon SPECIES_FROAKIE, 5
+	setvar VAR_STARTER_CHOICE, 3
+	switch VAR_STARTER_CHOICE
+	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_6
+	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_7
+	case 3, LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_8
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_1
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_6:
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_3
+	applymovement 2, Litten_Movement
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_4
+	waitmessage
+	waitfanfare
+	removeobject 4
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_1
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_7:
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_5
+	applymovement 2, Froakie_Movement
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_6
+	waitmessage
+	waitfanfare
+	removeobject 5
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_1
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_8:
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_7
+	applymovement 2, Turtwig_Movement
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_8
+	waitmessage
+	waitfanfare
+	removeobject 3
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_1
+
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig::
+	lockall
+	showmonpic SPECIES_TURTWIG, 10, 1
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_Text_0, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_ne LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_2
+	hidemonpic
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_9
+LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_1:
+	releaseall
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_2:
+	hidemonpic
+	removeobject 3
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_Text_1
+	waitmessage
+	waitfanfare
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_2
+	givemon SPECIES_TURTWIG, 5
+	setvar VAR_STARTER_CHOICE, 2
+	switch VAR_STARTER_CHOICE
+	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_6
+	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_7
+	case 3, LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_8
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_1
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_6:
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_3
+	applymovement 2, Litten_Movement
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_4
+	waitmessage
+	waitfanfare
+	removeobject 4
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_1
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_7:
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_5
+	applymovement 2, Froakie_Movement
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_6
+	waitmessage
+	waitfanfare
+	removeobject 5
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_1
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_8:
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_7
+	applymovement 2, Turtwig_Movement
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_8
+	waitmessage
+	waitfanfare
+	removeobject 3
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_1
+
+
+Litten_Movement:
+	walk_down
+	walk_left
+	walk_down
+	step_end
+
+Froakie_Movement:
+	walk_down
+	step_end
+
+Turtwig_Movement:
+	walk_down
+	walk_left
+	walk_left
+	walk_down
+	step_end
+
+LittlerootTown_MaplesLab_ComeIn_Text_0:
+	.string "Maple: Oh! Come in, come in! You must be\n"
+	.string "the other getting their first Pokemon\l"
+	.string "today!$"
+
+LittlerootTown_MaplesLab_ComeIn_Text_1:
+	.string "RIVAL: toned text$"
+
+LittlerootTown_MaplesLab_ComeIn_Text_2:
+	.string "Maple: If you're ready, why don't you\n"
+	.string "come look at the Pokemon I have here\l"
+	.string "and choose one?$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_0:
+	.string "This ball contains a Litten. It's\n"
+	.string "stubborn and fierce, but a powerful\l"
+	.string "ally. Will you take it?$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_1:
+	.string "{PLAYER} received a Litten!$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_2:
+	.string "Good choice! You two will make a great\n"
+	.string "team.$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_3:
+	.string "RIVAL: Then I'll choose Litten!$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_4:
+	.string "RIVAL received a Litten!$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_5:
+	.string "RIVAL: Then I'll choose Froakie!$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_6:
+	.string "RIVAL received a Froakie!$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_7:
+	.string "RIVAL: Then I'll choose Turtwig!$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_8:
+	.string "RIVAL received a Turtwig!$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Litten_Text_9:
+	.string "Take your time! This is an important\n"
+	.string "choice.$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_Text_0:
+	.string "Maple: This ball contains a Froakie. It's\n"
+	.string "timid, but a loyal partner. Will you take\l"
+	.string "it?$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Froakie_Text_1:
+	.string "{PLAYER} received a Froakie!$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_Text_0:
+	.string "Maple: This ball contains a Turtwig. It's\n"
+	.string "a hardy, easgoing companion. Will you\l"
+	.string "take it?$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Turtwig_Text_1:
+	.string "{PLAYER} received a Turtwig!$"
+
+
+
 LittlerootTown_ProfessorBirchsLab_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	call ProfBirch_EventScript_UpdateLocation
